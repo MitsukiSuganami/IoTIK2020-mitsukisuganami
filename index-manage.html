@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>IoTIK2020-管理</title>
+  <link rel="stylesheet" href="../css/stylesheet-iotik2020.css" type="text/css" media="screen and (max-device-width: 900px)">
+  <link rel="stylesheet" href="../css/stylesheet-iotik2020.css" type="text/css" media="screen and (min-device-width: 900px)">
+  <link rel="stylesheet" href="../css/stylesheet-manage.css" type="text/css" media="screen and (min-device-width: 900px)">
+  <!--トグル導入CSS-->
+  <link rel="stylesheet" href="../css/moretoggles.css" type="text/css">
+  <!--ライセンス-->
+  <!--
+  Copyright (c) 2020 Enkai Ji
+Released under the MIT license
+https://opensource.org/licenses/mit-license.php
+  -->
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <!--ライセンス-->
+  <!--
+
+   * jQuery JavaScript Library v3.5.0
+   * https://jquery.com/
+   *
+   * Includes Sizzle.js
+   * https://sizzlejs.com/
+   *
+   * Copyright JS Foundation and other contributors
+   * Released under the MIT license
+   * https://jquery.org/license
+   *
+   * Date: 2020-04-10T15:07Z
+
+  -->
+  <script src="../js/script-manage.js"></script>
+  <div class="header">
+    <div class="header-logo">IoTIK2020 <span class="place">Powered by Okayama Ichinomiya Senior High School</span></div>
+    <div class="button_wrapper">
+      <button class="button" onclick="location.href='../html/index-top.html'">TOP</button>
+      <button class="button" onclick="location.href='../html/index-status.html'">稼働状況</button>
+      <button class="button" onclick="location.href='../html/index-manage.html'">管理</button>
+      <button class="button" onclick="location.href='../html/index-log.html'">ログ</button>
+    </div>
+  </div>
+  <div class="main">
+    <div class="contents">
+      <h2 class="copy-continer">管理</h2>
+    </div>
+  </div>
+  <select multiple="multiple" id="house-select" multiple="multiple">
+    <option value="0" selected>選択してください</option>
+    <option value="1">NO.1</option>
+    <option value="2">NO.2</option>
+    <option value="3">NO.3</option>
+    <option value="4">NO.4</option>
+    <option value="5">NO.5</option>
+    <option value="6">NO.6</option>
+    <option value="7">NO.7</option>
+    <option value="8">NO.8</option>
+    <option value="9">NO.9</option>
+    <option value="10">NO.10</option>
+    <option value="11">NO.11</option>
+    <option value="12">NO.12</option>
+    <option value="13">NO.13</option>
+    <option value="14">NO.14</option>
+    <option value="15">NO.15</option>
+    <option value="16">NO.16</option>
+  </select><br>
+  <div><button tydive="button">　選択　</button></div>
+  <h5>PCで複数選択する場合は、WindowsではCtrlキー、Macではcommandキーを押しながら項目をクリックしてください。</h5>
+  <h5 style="display:inline;">ハウスNO.</h5>
+  <p style="display:inline;"></p>
+  <h5 style="display:inline;">が選択されています。</h5>
+  <!--換気扇ボタン-->
+  <div class="section-title">換気扇</div>
+  <form name="form-kanki">
+    <div class="mt-square-matcha kanki">
+      <input id="kanki" name="kanki" value="kanki" type="checkbox" onclick="update1()">
+      <label for="kanki"></label>
+    </div>
+  </form>
+  <h5>換気扇は <span id="span-kanki">OFF</span>です</h5>
+  <!--換気扇ここまで-->
+  <!--かん水ボタン-->
+  <div class="section-title">かん水</div>
+  <form name="form-kansui">
+    <div class="mt-square-matcha kansui">
+      <input id="kansui" name="kansui" value="kansui" type="checkbox" onclick="update2()">
+      <label for="kansui"></label>
+    </div>
+  </form>
+
+  <h5>かん水は <span id="span-kansui">OFF</span>です</h5>
+  <!--かん水ここまで-->
+  <div class="section-title">外カーテン</div>
+  <form action="kansui-sitei">
+    <div>
+      <label for="name">開閉度指定（％）</label>
+      <input type="number" min="0.00" max="100.00" step="0.01" placeholder="0.00以上100.00以下" id="kaihei-sitei" name="kaihei-sitei">
+    </div>
+  </form>
+  <!--加温器ボタン-->
+  <div class="section-title">加温器</div>
+  <form name="form-kaonki">
+    <div class="mt-square-matcha kaonki">
+      <input id="kaonki" name="kaonki" value="kaonki" type="checkbox" onclick="update3()">
+      <label for="kaonki"></label>
+    </div>
+  </form>
+
+  <h5>加温器は <span id="span-kaonki">OFF</span>です</h5>
+  <!--加温器ここまで-->
+  <div class="button_wrapper">
+    <button class="button" onclick="location.href='index-manage-schedule-top.html'">自動スケジュール</button>
+  </div>
+</body>
+
+</html>
