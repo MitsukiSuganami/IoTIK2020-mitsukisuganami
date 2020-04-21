@@ -1,0 +1,52 @@
+body{
+ font-family: sans-serif;
+ background-color: #ccffff;
+}
+.header{
+ background-color: #26d0c9;
+ color: #fff;
+ height: 65px;
+}
+.header-logo{
+ float: left;
+ font-size: 40px;
+ padding: 4px 6px;
+}
+.place{
+ font-size: 20px
+}
+.main{
+ padding: 0px;
+}
+.contents{
+ height: 100px;
+ margin-top: 20px;
+}
+.copy-continer h2{
+ border-bottom: 2px soild #dee7ec;
+ font-size: 40px;
+ padding-bottom: 3px;
+ margin-bottom: 10px;
+}
+.button{
+ display: inline-block;
+ border-radius: 2%;          /* 角丸       */
+ font-size: 50px;        /* 文字サイズ */
+ text-align: center;      /* 文字位置   */
+ cursor: pointer;     /* カーソル   */
+ padding: 2px;   /* 余白       */
+ background-color    : #26d0c9;     /* 背景色     */
+ color: #ffffff;     /* 文字色     */
+ line-height: 1em;         /* 1行の高さ  */
+ transition: .2s;         /* なめらか変化 */
+ box-shadow: 6px 6px 3px #666666;  /* 影の設定 */
+ border: 2px solid #666fff;    /* 枠の指定 */
+ height: 100px;
+ width: 100%;
+ bottom: 200px;
+}
+.button:hover {
+ box-shadow    : none;        /* カーソル時の影消去 */
+ color         : #26d0c9;     /* 文字色     */
+ background    : #ffffff;     /* 背景色     */
+}
